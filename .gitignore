@@ -1,0 +1,49 @@
+﻿# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+env*/
+env3/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dataset contents: allow only the small public instructions/scripts/lists
+/data/*
+!/data/README.md
+!/data/coco/
+/data/coco/*
+!/data/coco/prepare_data.py
+!/data/imgnet/
+/data/imgnet/*
+!/data/imgnet/*.txt
+
+# Archives and original data bundles
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Checkpoints and weights
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Temporary outputs
+*.tmp
+*.bak
+*.swp
+res_cirr/

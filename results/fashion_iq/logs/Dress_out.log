@@ -1,0 +1,346 @@
+2026-11-17,01:59:57 | ERROR | Rank None | Evaluation failed
+Traceback (most recent call last):
+  File "/root/project/src/eval_retrieval.py", line 360, in main
+    main_worker(args.gpu, None, log_queue, args)
+  File "/root/project/src/eval_retrieval.py", line 144, in main_worker
+    setup_log_save(args)
+  File "/root/project/src/eval_retrieval.py", line 116, in setup_log_save
+    if is_master(args):
+       ^^^^^^^^^^^^^^^
+  File "/root/project/src/utils.py", line 51, in is_master
+    return (not args.distributed) or args.gpu == 0 or args.dp
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'distributed'
+2026-11-17,02:07:10 | INFO | Rank None | Params:
+2026-11-17,02:07:10 | INFO | Rank None | C: 3.16
+2026-11-17,02:07:10 | INFO | Rank None | aggregate: True
+2026-11-17,02:07:10 | INFO | Rank None | batch_size: 64
+2026-11-17,02:07:10 | INFO | Rank None | beta1: 0.9
+2026-11-17,02:07:10 | INFO | Rank None | beta2: 0.98
+2026-11-17,02:07:10 | INFO | Rank None | checkpoint_path: /results/fashion_iq/dress/checkpoints
+2026-11-17,02:07:10 | INFO | Rank None | copy_codebase: False
+2026-11-17,02:07:10 | INFO | Rank None | csv_caption_key: title
+2026-11-17,02:07:10 | INFO | Rank None | csv_img_key: filepath
+2026-11-17,02:07:10 | INFO | Rank None | csv_separator: 	
+2026-11-17,02:07:10 | INFO | Rank None | dataset_type: auto
+2026-11-17,02:07:10 | INFO | Rank None | dataset_type_val: auto
+2026-11-17,02:07:10 | INFO | Rank None | debug: False
+2026-11-17,02:07:10 | INFO | Rank None | demo_out: demo
+2026-11-17,02:07:10 | INFO | Rank None | dist_backend: nccl
+2026-11-17,02:07:10 | INFO | Rank None | dist_url: tcp://127.0.0.1:6100
+2026-11-17,02:07:10 | INFO | Rank None | distributed: False
+2026-11-17,02:07:10 | INFO | Rank None | dp: False
+2026-11-17,02:07:10 | INFO | Rank None | droprate: 0.1
+2026-11-17,02:07:10 | INFO | Rank None | epochs: 32
+2026-11-17,02:07:10 | INFO | Rank None | eps: 1e-06
+2026-11-17,02:07:10 | INFO | Rank None | eval_mode: fashion
+2026-11-17,02:07:10 | INFO | Rank None | gpu: None
+2026-11-17,02:07:10 | INFO | Rank None | imagenet_v2: None
+2026-11-17,02:07:10 | INFO | Rank None | imagenet_val: None
+2026-11-17,02:07:10 | INFO | Rank None | log_level: 20
+2026-11-17,02:07:10 | INFO | Rank None | log_path: /results/fashion_iq/dress/out.log
+2026-11-17,02:07:10 | INFO | Rank None | logs: /results/fashion_iq
+2026-11-17,02:07:10 | INFO | Rank None | lr: 0.0005
+2026-11-17,02:07:10 | INFO | Rank None | middle_dim: 512
+2026-11-17,02:07:10 | INFO | Rank None | model: ViT-L/14
+2026-11-17,02:07:10 | INFO | Rank None | multigpu: None
+2026-11-17,02:07:10 | INFO | Rank None | n_layer: 2
+2026-11-17,02:07:10 | INFO | Rank None | name: dress
+2026-11-17,02:07:10 | INFO | Rank None | ngpus_per_node: 1
+2026-11-17,02:07:10 | INFO | Rank None | openai_pretrained: False
+2026-11-17,02:07:10 | INFO | Rank None | precision: amp
+2026-11-17,02:07:10 | INFO | Rank None | prompts: None
+2026-11-17,02:07:10 | INFO | Rank None | query_file: None
+2026-11-17,02:07:10 | INFO | Rank None | rank: None
+2026-11-17,02:07:10 | INFO | Rank None | regression_frequency: 2
+2026-11-17,02:07:10 | INFO | Rank None | report_to: 
+2026-11-17,02:07:10 | INFO | Rank None | resume: /root/project/checkpoints/pic2word_model.pt
+2026-11-17,02:07:10 | INFO | Rank None | retrieval_data: None
+2026-11-17,02:07:10 | INFO | Rank None | save_frequency: 1
+2026-11-17,02:07:10 | INFO | Rank None | save_most_recent: False
+2026-11-17,02:07:10 | INFO | Rank None | skip_aggregate: False
+2026-11-17,02:07:10 | INFO | Rank None | skip_scheduler: False
+2026-11-17,02:07:10 | INFO | Rank None | source_data: dress
+2026-11-17,02:07:10 | INFO | Rank None | target_data: None
+2026-11-17,02:07:10 | INFO | Rank None | target_pad: False
+2026-11-17,02:07:10 | INFO | Rank None | tensorboard: False
+2026-11-17,02:07:10 | INFO | Rank None | tensorboard_path: 
+2026-11-17,02:07:10 | INFO | Rank None | time_suffix: True
+2026-11-17,02:07:10 | INFO | Rank None | train_data: None
+2026-11-17,02:07:10 | INFO | Rank None | use_bn_sync: False
+2026-11-17,02:07:10 | INFO | Rank None | use_debiased_sampler: False
+2026-11-17,02:07:10 | INFO | Rank None | use_prefix: False
+2026-11-17,02:07:10 | INFO | Rank None | val_data: None
+2026-11-17,02:07:10 | INFO | Rank None | wandb: False
+2026-11-17,02:07:10 | INFO | Rank None | wandb_notes: 
+2026-11-17,02:07:10 | INFO | Rank None | warmup: 10000
+2026-11-17,02:07:10 | INFO | Rank None | wd: 0.2
+2026-11-17,02:07:10 | INFO | Rank None | workers: 1
+2026-11-17,02:07:10 | INFO | Rank None | world_size: 1
+2026-11-17,02:07:10 | INFO | Rank None | zeroshot_frequency: 2
+2026-11-17,02:07:56 | ERROR | Rank None | Evaluation failed
+Traceback (most recent call last):
+  File "/root/project/src/eval_retrieval.py", line 360, in main
+    main_worker(args.gpu, None, log_queue, args)
+  File "/root/project/src/eval_retrieval.py", line 146, in main_worker
+    model, img2text, preprocess_val = load_model(args)
+                                      ^^^^^^^^^^^^^^^^
+  File "/root/project/src/eval_retrieval.py", line 95, in load_model
+    checkpoint = torch.load(args.resume, map_location="cpu")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/torch/serialization.py", line 1615, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy.core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy.core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy.core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+2026-11-17,02:17:56 | INFO | Rank None | Params:
+2026-11-17,02:17:56 | INFO | Rank None | C: 3.16
+2026-11-17,02:17:56 | INFO | Rank None | aggregate: True
+2026-11-17,02:17:56 | INFO | Rank None | batch_size: 64
+2026-11-17,02:17:56 | INFO | Rank None | beta1: 0.9
+2026-11-17,02:17:56 | INFO | Rank None | beta2: 0.98
+2026-11-17,02:17:56 | INFO | Rank None | checkpoint_path: /results/fashion_iq/dress/checkpoints
+2026-11-17,02:17:56 | INFO | Rank None | copy_codebase: False
+2026-11-17,02:17:56 | INFO | Rank None | csv_caption_key: title
+2026-11-17,02:17:56 | INFO | Rank None | csv_img_key: filepath
+2026-11-17,02:17:56 | INFO | Rank None | csv_separator: 	
+2026-11-17,02:17:56 | INFO | Rank None | dataset_type: auto
+2026-11-17,02:17:56 | INFO | Rank None | dataset_type_val: auto
+2026-11-17,02:17:56 | INFO | Rank None | debug: False
+2026-11-17,02:17:56 | INFO | Rank None | demo_out: demo
+2026-11-17,02:17:56 | INFO | Rank None | dist_backend: nccl
+2026-11-17,02:17:56 | INFO | Rank None | dist_url: tcp://127.0.0.1:6100
+2026-11-17,02:17:56 | INFO | Rank None | distributed: False
+2026-11-17,02:17:56 | INFO | Rank None | dp: False
+2026-11-17,02:17:56 | INFO | Rank None | droprate: 0.1
+2026-11-17,02:17:56 | INFO | Rank None | epochs: 32
+2026-11-17,02:17:56 | INFO | Rank None | eps: 1e-06
+2026-11-17,02:17:56 | INFO | Rank None | eval_mode: fashion
+2026-11-17,02:17:56 | INFO | Rank None | gpu: None
+2026-11-17,02:17:56 | INFO | Rank None | imagenet_v2: None
+2026-11-17,02:17:56 | INFO | Rank None | imagenet_val: None
+2026-11-17,02:17:56 | INFO | Rank None | log_level: 20
+2026-11-17,02:17:56 | INFO | Rank None | log_path: /results/fashion_iq/dress/out.log
+2026-11-17,02:17:56 | INFO | Rank None | logs: /results/fashion_iq
+2026-11-17,02:17:56 | INFO | Rank None | lr: 0.0005
+2026-11-17,02:17:56 | INFO | Rank None | middle_dim: 512
+2026-11-17,02:17:56 | INFO | Rank None | model: ViT-L/14
+2026-11-17,02:17:56 | INFO | Rank None | multigpu: None
+2026-11-17,02:17:56 | INFO | Rank None | n_layer: 2
+2026-11-17,02:17:56 | INFO | Rank None | name: dress
+2026-11-17,02:17:56 | INFO | Rank None | ngpus_per_node: 1
+2026-11-17,02:17:56 | INFO | Rank None | openai_pretrained: False
+2026-11-17,02:17:56 | INFO | Rank None | precision: amp
+2026-11-17,02:17:56 | INFO | Rank None | prompts: None
+2026-11-17,02:17:56 | INFO | Rank None | query_file: None
+2026-11-17,02:17:56 | INFO | Rank None | rank: None
+2026-11-17,02:17:56 | INFO | Rank None | regression_frequency: 2
+2026-11-17,02:17:56 | INFO | Rank None | report_to: 
+2026-11-17,02:17:56 | INFO | Rank None | resume: /root/project/checkpoints/pic2word_model.pt
+2026-11-17,02:17:56 | INFO | Rank None | retrieval_data: None
+2026-11-17,02:17:56 | INFO | Rank None | save_frequency: 1
+2026-11-17,02:17:56 | INFO | Rank None | save_most_recent: False
+2026-11-17,02:17:56 | INFO | Rank None | skip_aggregate: False
+2026-11-17,02:17:56 | INFO | Rank None | skip_scheduler: False
+2026-11-17,02:17:56 | INFO | Rank None | source_data: dress
+2026-11-17,02:17:56 | INFO | Rank None | target_data: None
+2026-11-17,02:17:56 | INFO | Rank None | target_pad: False
+2026-11-17,02:17:56 | INFO | Rank None | tensorboard: False
+2026-11-17,02:17:56 | INFO | Rank None | tensorboard_path: 
+2026-11-17,02:17:56 | INFO | Rank None | time_suffix: True
+2026-11-17,02:17:56 | INFO | Rank None | train_data: None
+2026-11-17,02:17:56 | INFO | Rank None | use_bn_sync: False
+2026-11-17,02:17:56 | INFO | Rank None | use_debiased_sampler: False
+2026-11-17,02:17:56 | INFO | Rank None | use_prefix: False
+2026-11-17,02:17:56 | INFO | Rank None | val_data: None
+2026-11-17,02:17:56 | INFO | Rank None | wandb: False
+2026-11-17,02:17:56 | INFO | Rank None | wandb_notes: 
+2026-11-17,02:17:56 | INFO | Rank None | warmup: 10000
+2026-11-17,02:17:56 | INFO | Rank None | wd: 0.2
+2026-11-17,02:17:56 | INFO | Rank None | workers: 1
+2026-11-17,02:17:56 | INFO | Rank None | world_size: 1
+2026-11-17,02:17:56 | INFO | Rank None | zeroshot_frequency: 2
+2026-11-17,02:18:16 | INFO | Rank None | => loaded checkpoint '/root/project/checkpoints/pic2word_model.pt' (epoch 30)
+2026-11-17,02:24:41 | INFO | Rank None | Fashion-IQ dress (caps): using 2017 samples
+2026-11-17,02:24:42 | INFO | Rank None | Fashion-IQ dress (imgs): using 3817 samples
+2026-11-17,02:24:56 | ERROR | Rank None | Evaluation failed
+Traceback (most recent call last):
+  File "/root/project/src/eval_retrieval.py", line 360, in main
+    main_worker(args.gpu, None, log_queue, args)
+  File "/root/project/src/eval_retrieval.py", line 263, in main_worker
+    evaluate_fashion(model, img2text, args, source_dataloader, target_dataloader)
+  File "/root/project/src/eval_utils.py", line 475, in evaluate_fashion
+    image_features = m.encode_image(target_images)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/project/model/model.py", line 404, in encode_image
+    return self.visual(image.type(self.dtype))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/project/model/model.py", line 257, in forward
+    x = self.conv1(x)  # shape = [*, width, grid, grid]
+        ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1787, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1798, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 565, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 560, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+RuntimeError: Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+2026-11-17,02:41:25 | INFO | Rank None | Params:
+2026-11-17,02:41:25 | INFO | Rank None | C: 3.16
+2026-11-17,02:41:25 | INFO | Rank None | aggregate: True
+2026-11-17,02:41:25 | INFO | Rank None | batch_size: 64
+2026-11-17,02:41:25 | INFO | Rank None | beta1: 0.9
+2026-11-17,02:41:25 | INFO | Rank None | beta2: 0.98
+2026-11-17,02:41:25 | INFO | Rank None | checkpoint_path: /results/fashion_iq/dress/checkpoints
+2026-11-17,02:41:25 | INFO | Rank None | copy_codebase: False
+2026-11-17,02:41:25 | INFO | Rank None | csv_caption_key: title
+2026-11-17,02:41:25 | INFO | Rank None | csv_img_key: filepath
+2026-11-17,02:41:25 | INFO | Rank None | csv_separator: 	
+2026-11-17,02:41:25 | INFO | Rank None | dataset_type: auto
+2026-11-17,02:41:25 | INFO | Rank None | dataset_type_val: auto
+2026-11-17,02:41:25 | INFO | Rank None | debug: False
+2026-11-17,02:41:25 | INFO | Rank None | demo_out: demo
+2026-11-17,02:41:25 | INFO | Rank None | dist_backend: nccl
+2026-11-17,02:41:25 | INFO | Rank None | dist_url: tcp://127.0.0.1:6100
+2026-11-17,02:41:25 | INFO | Rank None | distributed: False
+2026-11-17,02:41:25 | INFO | Rank None | dp: False
+2026-11-17,02:41:25 | INFO | Rank None | droprate: 0.1
+2026-11-17,02:41:25 | INFO | Rank None | epochs: 32
+2026-11-17,02:41:25 | INFO | Rank None | eps: 1e-06
+2026-11-17,02:41:25 | INFO | Rank None | eval_mode: fashion
+2026-11-17,02:41:25 | INFO | Rank None | gpu: None
+2026-11-17,02:41:25 | INFO | Rank None | imagenet_v2: None
+2026-11-17,02:41:25 | INFO | Rank None | imagenet_val: None
+2026-11-17,02:41:25 | INFO | Rank None | log_level: 20
+2026-11-17,02:41:25 | INFO | Rank None | log_path: /results/fashion_iq/dress/out.log
+2026-11-17,02:41:25 | INFO | Rank None | logs: /results/fashion_iq
+2026-11-17,02:41:25 | INFO | Rank None | lr: 0.0005
+2026-11-17,02:41:25 | INFO | Rank None | middle_dim: 512
+2026-11-17,02:41:25 | INFO | Rank None | model: ViT-L/14
+2026-11-17,02:41:25 | INFO | Rank None | multigpu: None
+2026-11-17,02:41:25 | INFO | Rank None | n_layer: 2
+2026-11-17,02:41:25 | INFO | Rank None | name: dress
+2026-11-17,02:41:25 | INFO | Rank None | ngpus_per_node: 1
+2026-11-17,02:41:25 | INFO | Rank None | openai_pretrained: False
+2026-11-17,02:41:25 | INFO | Rank None | precision: amp
+2026-11-17,02:41:25 | INFO | Rank None | prompts: None
+2026-11-17,02:41:25 | INFO | Rank None | query_file: None
+2026-11-17,02:41:25 | INFO | Rank None | rank: None
+2026-11-17,02:41:25 | INFO | Rank None | regression_frequency: 2
+2026-11-17,02:41:25 | INFO | Rank None | report_to: 
+2026-11-17,02:41:25 | INFO | Rank None | resume: /root/project/checkpoints/pic2word_model.pt
+2026-11-17,02:41:25 | INFO | Rank None | retrieval_data: None
+2026-11-17,02:41:25 | INFO | Rank None | save_frequency: 1
+2026-11-17,02:41:25 | INFO | Rank None | save_most_recent: False
+2026-11-17,02:41:25 | INFO | Rank None | skip_aggregate: False
+2026-11-17,02:41:25 | INFO | Rank None | skip_scheduler: False
+2026-11-17,02:41:25 | INFO | Rank None | source_data: dress
+2026-11-17,02:41:25 | INFO | Rank None | target_data: None
+2026-11-17,02:41:25 | INFO | Rank None | target_pad: False
+2026-11-17,02:41:25 | INFO | Rank None | tensorboard: False
+2026-11-17,02:41:25 | INFO | Rank None | tensorboard_path: 
+2026-11-17,02:41:25 | INFO | Rank None | time_suffix: True
+2026-11-17,02:41:25 | INFO | Rank None | train_data: None
+2026-11-17,02:41:25 | INFO | Rank None | use_bn_sync: False
+2026-11-17,02:41:25 | INFO | Rank None | use_debiased_sampler: False
+2026-11-17,02:41:25 | INFO | Rank None | use_prefix: False
+2026-11-17,02:41:25 | INFO | Rank None | val_data: None
+2026-11-17,02:41:25 | INFO | Rank None | wandb: False
+2026-11-17,02:41:25 | INFO | Rank None | wandb_notes: 
+2026-11-17,02:41:25 | INFO | Rank None | warmup: 10000
+2026-11-17,02:41:25 | INFO | Rank None | wd: 0.2
+2026-11-17,02:41:25 | INFO | Rank None | workers: 1
+2026-11-17,02:41:25 | INFO | Rank None | world_size: 1
+2026-11-17,02:41:25 | INFO | Rank None | zeroshot_frequency: 2
+2026-11-17,02:43:56 | INFO | Rank None | => loaded checkpoint '/root/project/checkpoints/pic2word_model.pt' (epoch 30)
+2026-11-17,02:43:59 | INFO | Rank None | Fashion-IQ dress (caps): using 2017 samples
+2026-11-17,02:44:00 | INFO | Rank None | Fashion-IQ dress (imgs): using 3817 samples
+2026-11-17,03:47:41 | INFO | Rank None | Params:
+2026-11-17,03:47:41 | INFO | Rank None | C: 3.16
+2026-11-17,03:47:41 | INFO | Rank None | aggregate: True
+2026-11-17,03:47:41 | INFO | Rank None | batch_size: 64
+2026-11-17,03:47:41 | INFO | Rank None | beta1: 0.9
+2026-11-17,03:47:41 | INFO | Rank None | beta2: 0.98
+2026-11-17,03:47:41 | INFO | Rank None | checkpoint_path: /results/fashion_iq/dress/checkpoints
+2026-11-17,03:47:41 | INFO | Rank None | copy_codebase: False
+2026-11-17,03:47:41 | INFO | Rank None | csv_caption_key: title
+2026-11-17,03:47:41 | INFO | Rank None | csv_img_key: filepath
+2026-11-17,03:47:41 | INFO | Rank None | csv_separator: 	
+2026-11-17,03:47:41 | INFO | Rank None | dataset_type: auto
+2026-11-17,03:47:41 | INFO | Rank None | dataset_type_val: auto
+2026-11-17,03:47:41 | INFO | Rank None | debug: False
+2026-11-17,03:47:41 | INFO | Rank None | demo_out: demo
+2026-11-17,03:47:41 | INFO | Rank None | dist_backend: nccl
+2026-11-17,03:47:41 | INFO | Rank None | dist_url: tcp://127.0.0.1:6100
+2026-11-17,03:47:41 | INFO | Rank None | distributed: False
+2026-11-17,03:47:41 | INFO | Rank None | dp: False
+2026-11-17,03:47:41 | INFO | Rank None | droprate: 0.1
+2026-11-17,03:47:41 | INFO | Rank None | epochs: 32
+2026-11-17,03:47:41 | INFO | Rank None | eps: 1e-06
+2026-11-17,03:47:41 | INFO | Rank None | eval_mode: fashion
+2026-11-17,03:47:41 | INFO | Rank None | gpu: None
+2026-11-17,03:47:41 | INFO | Rank None | imagenet_v2: None
+2026-11-17,03:47:41 | INFO | Rank None | imagenet_val: None
+2026-11-17,03:47:41 | INFO | Rank None | log_level: 20
+2026-11-17,03:47:41 | INFO | Rank None | log_path: /results/fashion_iq/dress/out.log
+2026-11-17,03:47:41 | INFO | Rank None | logs: /results/fashion_iq
+2026-11-17,03:47:41 | INFO | Rank None | lr: 0.0005
+2026-11-17,03:47:41 | INFO | Rank None | middle_dim: 512
+2026-11-17,03:47:41 | INFO | Rank None | model: ViT-L/14
+2026-11-17,03:47:41 | INFO | Rank None | multigpu: None
+2026-11-17,03:47:41 | INFO | Rank None | n_layer: 2
+2026-11-17,03:47:41 | INFO | Rank None | name: dress
+2026-11-17,03:47:41 | INFO | Rank None | ngpus_per_node: 1
+2026-11-17,03:47:41 | INFO | Rank None | openai_pretrained: False
+2026-11-17,03:47:41 | INFO | Rank None | precision: amp
+2026-11-17,03:47:41 | INFO | Rank None | prompts: None
+2026-11-17,03:47:41 | INFO | Rank None | query_file: None
+2026-11-17,03:47:41 | INFO | Rank None | rank: None
+2026-11-17,03:47:41 | INFO | Rank None | regression_frequency: 2
+2026-11-17,03:47:41 | INFO | Rank None | report_to: 
+2026-11-17,03:47:41 | INFO | Rank None | resume: /root/project/checkpoints/pic2word_model.pt
+2026-11-17,03:47:41 | INFO | Rank None | retrieval_data: None
+2026-11-17,03:47:41 | INFO | Rank None | save_frequency: 1
+2026-11-17,03:47:41 | INFO | Rank None | save_most_recent: False
+2026-11-17,03:47:41 | INFO | Rank None | skip_aggregate: False
+2026-11-17,03:47:41 | INFO | Rank None | skip_scheduler: False
+2026-11-17,03:47:41 | INFO | Rank None | source_data: dress
+2026-11-17,03:47:41 | INFO | Rank None | target_data: None
+2026-11-17,03:47:41 | INFO | Rank None | target_pad: False
+2026-11-17,03:47:41 | INFO | Rank None | tensorboard: False
+2026-11-17,03:47:41 | INFO | Rank None | tensorboard_path: 
+2026-11-17,03:47:41 | INFO | Rank None | time_suffix: True
+2026-11-17,03:47:41 | INFO | Rank None | train_data: None
+2026-11-17,03:47:41 | INFO | Rank None | use_bn_sync: False
+2026-11-17,03:47:41 | INFO | Rank None | use_debiased_sampler: False
+2026-11-17,03:47:41 | INFO | Rank None | use_prefix: False
+2026-11-17,03:47:41 | INFO | Rank None | val_data: None
+2026-11-17,03:47:41 | INFO | Rank None | wandb: False
+2026-11-17,03:47:41 | INFO | Rank None | wandb_notes: 
+2026-11-17,03:47:41 | INFO | Rank None | warmup: 10000
+2026-11-17,03:47:41 | INFO | Rank None | wd: 0.2
+2026-11-17,03:47:41 | INFO | Rank None | workers: 1
+2026-11-17,03:47:41 | INFO | Rank None | world_size: 1
+2026-11-17,03:47:41 | INFO | Rank None | zeroshot_frequency: 2
+2026-11-17,03:47:59 | INFO | Rank None | => loaded checkpoint '/root/project/checkpoints/pic2word_model.pt' (epoch 30)
+2026-11-17,03:48:02 | INFO | Rank None | Fashion-IQ dress (caps): using 2017 samples
+2026-11-17,03:48:03 | INFO | Rank None | Fashion-IQ dress (imgs): using 3817 samples
+2026-11-17,03:54:06 | INFO | Rank None | Eval composed FeatureR@1: 5.0074	R@5: 14.2786	R@10: 20.3768	R@50: 41.3485	R@100: 52.5533
+2026-11-17,03:54:07 | INFO | Rank None | Eval image FeatureR@1: 0.0496	R@5: 2.3302	R@10: 4.3133	R@50: 13.8820	R@100: 20.5751
+2026-11-17,03:54:09 | INFO | Rank None | Eval text FeatureR@1: 3.5697	R@5: 8.6267	R@10: 13.1879	R@50: 28.6564	R@100: 38.6713
+2026-11-17,03:54:11 | INFO | Rank None | Eval mixture FeatureR@1: 0.4462	R@5: 10.2132	R@10: 16.0139	R@50: 33.1185	R@100: 42.8359
